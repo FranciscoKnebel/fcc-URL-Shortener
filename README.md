@@ -9,13 +9,13 @@ When I visit that shortened URL, it will redirect me to my original link.
 
 ###### Example creation usage:
 ```
-https://shurli.herokuapp.com/new/https://www.google.com 
-https://shurli.herokuapp.com/new/http://freecodecamp.com/news
+https://smaller.herokuapp.com/new/https://www.google.com 
+https://smaller.herokuapp.com/new/http://freecodecamp.com/news
 ```
 
 ###### Example creation output:
 ```
-{ "original_url": "http://freecodecamp.com/news", "short_url": "https://shurli.herokuapp.com/4" }
+{ "original_url": "http://freecodecamp.com/news", "short_url": "https://smaller.herokuapp.com/4" }
 ```
 
 #### Demo
