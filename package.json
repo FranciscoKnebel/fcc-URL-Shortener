@@ -1,0 +1,23 @@
+{
+  "name": "fcc-url-shortener",
+  "version": "1.0.0",
+  "description": "URL Shortener for freecodecamp.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyoZeus/fcc-URL-Shortener.git"
+  },
+  "author": "Francisco Knebel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyoZeus/fcc-URL-Shortener/issues"
+  },
+  "homepage": "https://github.com/KyoZeus/fcc-URL-Shortener#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^2.1.7"
+  }
+}
