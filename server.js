@@ -12,9 +12,8 @@ routes(app, __dirname);
 
 api(app, db, __dirname);
 
-/*app.use(function(req, res) {
-    res.status(404).sendFile(__dirname + '/client/views/404.html');
-});*/
+
+app.use('/css', express.static(__dirname + '/client/css'));
 
 app.listen(port,  function () {
 	console.log('Listening on port ' + port + '...');
