@@ -11,5 +11,9 @@ module.exports = function(app, dirname) {
         .get(function(req, res) {
             res.sendFile(dirname + '/LICENSE.md');
         });
-        
+    
+    app.route('/new/')
+        .get(function(req, res) {
+            res.sendFile(dirname + '/client/views/new.html');
+        });
 };
