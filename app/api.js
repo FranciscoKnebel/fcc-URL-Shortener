@@ -57,8 +57,6 @@ module.exports = function(app, db, dirname) {
                     if(err)
                         console.error(err.message);
                         
-                    console.log(doc);
-                        
                     if(doc)
                         res.redirect(doc.original);
                     else
