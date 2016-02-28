@@ -1,15 +1,18 @@
 var model = require('./models/url');
 var validator = require('validator');
+var url = require("url");
 var base62 = require("base62"); //encoder and decoder of base 62 (0-9, a-z, A-Z)
 
 module.exports = function(app, db, dirname) {
     db.on  ('error', console.error.bind(console, 'connection error:'));
     
     db.once('open' , function() {
-        var host = 'http://' + process.env.C9_HOSTNAME + '/';
+        var host = '';
         
         app.route('/new/*')
             .get(function(req, res) {
+            host = getHost(req) + '/'; // ex: http://www.yourwebsitedomain.com/
+            
             var id = req.url.substring(5);
             
             if(validator.isURL(id, {require_protocol: true})) {
@@ -66,5 +69,11 @@ module.exports = function(app, db, dirname) {
                 });
             });
     });
-
+    
+    function getHost(req) {
+        return url.format({
+            protocol: req.protocol,
+            host: req.get('host'),
+          });
+    }
 };
