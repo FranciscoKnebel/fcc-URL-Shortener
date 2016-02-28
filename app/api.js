@@ -42,7 +42,9 @@ module.exports = function(app, db, dirname) {
                 });
             }
             else {
-                res.end("Not a valid url");
+                //if user informs an invalid url, the json contains an error message.
+                var obj = {error: "Invalid url"};
+                res.json(obj);
             }
         });
         
